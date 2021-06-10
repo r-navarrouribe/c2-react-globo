@@ -24,3 +24,7 @@ code {
   position: absolute;
   transition: all 300ms;
 }
+
+.texto-contador {
+  font-size: 25px;
+}

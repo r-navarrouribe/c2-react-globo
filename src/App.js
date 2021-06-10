@@ -15,17 +15,25 @@ function App() {
       setPosicionGlobo(nuevaPosicion);
     }, 200);
   };
-
+  let [contadorClicks, setContadorClicks] = useState(0);
+  const sumadorContador = () => {
+    setContadorClicks(contadorClicks++);
+  };
   // Fin declaraciones
   return (
     <>
+      <div>
+        <span className="texto-contador">
+          Número de clicks: {contadorClicks}
+        </span>
+      </div>
       <div className="contenedor-icono">
         <i
           onMouseOver={moverGlobo}
+          onClick={sumadorContador}
           className="icono-globo fab fa-fly"
           style={posicionGlobo}
         ></i>
-        ;
       </div>
     </>
   );
